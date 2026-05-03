@@ -8,12 +8,12 @@
 
 <img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
 
-[![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutaltools/brutalmod)
+[![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-informational.svg?style=for-the-badge)](https://github.com/brutaltools/brutalmod)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-informational.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod)
 [![Downloads](https://img.shields.io/badge/downloads-50K+-brightgreen.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 
-**🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutaltools) 🔥**
+**🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutal-45) 🔥**
 
 [Download](#-download) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Building](#-building-from-source)
 
