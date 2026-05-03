@@ -131,6 +131,7 @@ BrutalMod is a **professional, lightweight soundboard application** designed spe
 
 # Clone the repository
 git clone https://github.com/brutal-45/Brutal-mod.git
+
 cd brutalmod/soundboard-app
 
 # Install dependencies
