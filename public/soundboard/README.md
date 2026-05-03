@@ -1,4 +1,4 @@
-
+<div aling="center"
 
 
 <img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
