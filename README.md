@@ -423,10 +423,10 @@ copies or substantial portions of the Software.
 
 ## 📞 Support
 
-- 📧 Email: support@brutaltools.com
-- 💬 Discord: [Join our server](https://discord.gg/brutaltools)
-- 🐛 Issues: [GitHub Issues](https://github.com/brutaltools/brutalmod/issues)
-- 📖 Wiki: [Documentation](https://github.com/brutaltools/brutalmod/wiki)
+- 📧 Email: creatorsports81#gmail.com
+- 💬 Discord: [Join our server](https://discord.gg/)
+- 🐛 Issues: [GitHub Issues](https://github.com/brutal_45/Brutal-mod/issues)
+- 📖 Wiki: [Documentation](https://github.com/brutal-45/Brutal-mod/wiki)
 
 ---
 
@@ -434,11 +434,11 @@ copies or substantial portions of the Software.
 
 ### 💀 DOMINATE VOICE CHAT WITH BRUTALMOD! 💀
 
-**🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutaltools) 🔥**
+**🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/Brutal-45) 🔥**
 
-[![Star](https://img.shields.io/github/stars/brutaltools/brutalmod?style=social)](https://github.com/brutaltools/brutalmod)
-[![Fork](https://img.shields.io/github/forks/brutaltools/brutalmod?style=social)](https://github.com/brutaltools/brutalmod/fork)
-[![Watch](https://img.shields.io/github/watchers/brutaltools/brutalmod?style=social)](https://github.com/brutaltools/brutalmod)
+[![Star](https://img.shields.io/github/stars/brutal-45/Brutal-mod?style=social)](https://github.com/brutal-45/Brutal-mod)
+[![Fork](https://img.shields.io/github/forks/brutal-45/Brutal-mod?style=social)](https://github.com/brutal-45/Brutal-mod/fork)
+[![Watch](https://img.shields.io/github/watchers/brutal-45/Brutal-mod?style=social)](https://github.com/brutal-45/Brutal-mod)
 
 **Made with 💀 by the BrutalTools Team**
 
