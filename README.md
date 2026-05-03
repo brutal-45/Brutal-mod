@@ -423,7 +423,7 @@ copies or substantial portions of the Software.
 
 ## 📞 Support
 
-- 📧 Email: creatorsports81#gmail.com
+- 📧 Email: creatorsports81@gmail.com
 - 💬 Discord: [Join our server](https://discord.gg/)
 - 🐛 Issues: [GitHub Issues](https://github.com/brutal-45/Brutal-mod/issues)
 - 📖 Wiki: [Documentation](https://github.com/brutal-45/Brutal-mod/wiki)
