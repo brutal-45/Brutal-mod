@@ -1,6 +1,10 @@
 <div align="center">
 
- <img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
+
+
+
+<img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
+
 
 # 🔥 BrutalMod
 
