@@ -6,7 +6,7 @@
 
 **Play sounds through your microphone in Discord, Zoom, Teams, and more!**
 
-<img src="public/Brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
+<img src="public/Brutal-mod-logo.png" alt="BrutalMod Logo" width="120" height="120">
 
 # 🔥 BrutalMod
 
