@@ -1,5 +1,6 @@
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/brutal-45/Brutal-mod/main/public/brutalmod-logo.png" alt="BrutalMod Logo" width="180" height="180">
 
 # 🔥 BrutalMod
 
@@ -50,17 +51,21 @@
 
 | Document | Description |
 |----------|-------------|
-| **[📖 Complete User Guide](GUIDE.md)** | A to Z guide: Installation, Setup, Usage, Troubleshooting |
+| **[📖 Complete User Guide](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md)** | A to Z guide: Installation, Setup, Usage, Troubleshooting |
+| **[🎵 Adding & Managing Sounds](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md)** | Detailed guide for adding, editing, and organizing sounds |
 | **[🔧 Build Guide](#️-building-from-source)** | How to build from source code |
 
 ### Quick Links
 
-- [Installation Guide](GUIDE.md#installation)
-- [Adding Sounds](GUIDE.md#adding-sounds)
-- [Setting Up Hotkeys](GUIDE.md#setting-up-hotkeys)
-- [Microphone Output Setup](GUIDE.md#microphone-output-setup)
-- [Troubleshooting](GUIDE.md#troubleshooting)
-- [FAQ](GUIDE.md#faq)
+- [Installation Guide](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md#installation)
+- [Adding Sounds](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md#-adding-sounds)
+- [Managing Sound Library](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md#-managing-your-sound-library)
+- [Categories & Organization](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md#-categories--organization)
+- [Importing & Exporting Packs](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md#-importing--exporting-sound-packs)
+- [Setting Up Hotkeys](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md#setting-up-hotkeys)
+- [Microphone Output Setup](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md#microphone-output-setup)
+- [Troubleshooting](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md#troubleshooting)
+- [FAQ](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md#faq)
 
 ---
 
@@ -118,6 +123,15 @@ Since BrutalMod is free and open source, the EXE is not digitally signed. When y
 
 ### Build from Source (Recommended for Security)
 
+> ⚠️ **IMPORTANT**: Do NOT double-click `app.js` directly! This is an Electron app and must be run through the provided batch files or npm commands.
+
+**Easy Way (Windows):**
+1. Download the source code from [Releases](https://github.com/brutal-45/Brutal-mod/releases)
+2. Extract the ZIP file
+3. **Double-click `START_HERE.bat`** (Recommended) or `BUILD.bat`
+4. Find your EXE in the `dist` folder!
+
+**Command Line:**
 ```bash
 # Clone the repository
 git clone https://github.com/brutal-45/Brutal-mod.git
@@ -131,6 +145,8 @@ npm install
 # Build Windows EXE
 npm run build:win
 ```
+
+> ⚡ **Tip**: The EXE will be in the `dist` folder after building. You can also run `RUN.bat` to test the app before building.
 
 ---
 
@@ -206,6 +222,10 @@ Brutal-mod/
 ├── 🌉 preload.js          # IPC bridge
 ├── 📝 README.md           # This file
 ├── 📚 GUIDE.md            # Complete user guide
+├── 🎵 ADDING_SOUNDS.md    # Sound management guide
+├── 🚀 START_HERE.bat      # Easy startup menu
+├── ▶️ RUN.bat             # Quick run script
+├── 🔨 BUILD.bat           # Build EXE script
 └── 📁 sounds/             # Your sound files
 ```
 
@@ -266,7 +286,8 @@ SOFTWARE.
 | **Repository** | [github.com/brutal-45/Brutal-mod](https://github.com/brutal-45/Brutal-mod) |
 | **Releases** | [github.com/brutal-45/Brutal-mod/releases](https://github.com/brutal-45/Brutal-mod/releases) |
 | **Issues** | [github.com/brutal-45/Brutal-mod/issues](https://github.com/brutal-45/Brutal-mod/issues) |
-| **Complete Guide** | [GUIDE.md](GUIDE.md) |
+| **Complete Guide** | [GUIDE.md](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md) |
+| **Adding Sounds Guide** | [ADDING_SOUNDS.md](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md) |
 
 ---
 
