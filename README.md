@@ -241,7 +241,7 @@ brutalmod/
 
 ### Build Steps
 
-#### For HTML Version
+#### For HTML Version But html is only for see the app as native applications
 ```bash
 # No build required! Just open index.html
 # Or create a zip for distribution:
