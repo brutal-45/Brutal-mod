@@ -11,7 +11,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutaltools/brutalmod)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-informational.svg?style=for-the-badge)](https://github.com/brutaltools/brutalmod)
-[![Downloads](https://img.shields.io/badge/downloads-50K+-brightgreen.svg?style=for-the-badge)](https://github.com/brutaltools/brutalmod)
+[![Downloads](https://img.shields.io/badge/downloads-50K+-brightgreen.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 
 **🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutaltools) 🔥**
 
@@ -96,7 +96,7 @@ BrutalMod is a **professional, lightweight soundboard application** designed spe
 
 ### Option 1: HTML Version (Recommended for Quick Start)
 
-[![Download HTML](https://img.shields.io/badge/Download-HTML_Version-red.svg?style=for-the-badge&logo=html5)](https://github.com/brutaltools/brutalmod/releases)
+[![Download HTML](https://img.shields.io/badge/Download-HTML_Version-red.svg?style=for-the-badge&logo=html5)](https://github.com/brutal-45/Brutal-mod/releases/tag/V-1.0.0)
 
 - No installation required
 - Works on any OS with a browser
@@ -105,7 +105,7 @@ BrutalMod is a **professional, lightweight soundboard application** designed spe
 
 ### Option 2: EXE Version (Windows App)
 
-[![Download EXE](https://img.shields.io/badge/Download-EXE_Version-orange.svg?style=for-the-badge&logo=windows)](https://github.com/brutaltools/brutalmod/releases)
+[![Download EXE](https://img.shields.io/badge/Download-EXE_Version-orange.svg?style=for-the-badge&logo=windows)](https://github.com/brutal-45/Brutal-mod/releases/tag/V-1.0.1)
 
 - Standalone Windows application
 - Global hotkeys work anywhere
@@ -130,7 +130,7 @@ BrutalMod is a **professional, lightweight soundboard application** designed spe
 # Prerequisites: Node.js 18+ and npm
 
 # Clone the repository
-git clone https://github.com/brutaltools/brutalmod.git
+git clone https://github.com/brutal-45/Brutal-mod.git
 cd brutalmod/soundboard-app
 
 # Install dependencies
