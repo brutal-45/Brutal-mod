@@ -1,12 +1,6 @@
 <div align="center">
 
-# 💀 BRUTALMOD
-
-### Professional Soundboard for Gamers
-
-**Play sounds through your microphone in Discord, Zoom, Teams, and more!**
-
-<img src="public/Brutal-mod-logo.png" alt="BrutalMod Logo" width="120" height="120">
+<img src="https://raw.githubusercontent.com/brutal-45/Brutal-mod/main/public/Brutalmod-logo.png" alt="BrutalMod Logo" width="180" height="180">
 
 # 🔥 BrutalMod
 
