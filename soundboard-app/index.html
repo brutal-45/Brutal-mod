@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrutalMod - Soundboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+</head>
+<body>
+    <div class="app">
+        <!-- Title Bar (for Electron) -->
+        <div class="titlebar" id="titlebar">
+            <div class="titlebar-drag">
+                <div class="titlebar-icon">💀</div>
+                <span class="titlebar-title">BRUTALMOD</span>
+                <span class="titlebar-version">v1.0</span>
+            </div>
+            <div class="titlebar-controls">
+                <button class="titlebar-btn minimize" id="minimizeBtn">─</button>
+                <button class="titlebar-btn maximize" id="maximizeBtn">□</button>
+                <button class="titlebar-btn close" id="closeBtn">✕</button>
+            </div>
+        </div>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo-container">
+                        <div class="logo-glow"></div>
+                        <div class="logo">💀</div>
+                    </div>
+                    <div class="brand">
+                        <span class="brand-brutal">BRUTAL</span><span class="brand-mod">MOD</span>
+                    </div>
+                    <a href="https://github.com/brutal-45/Brutal-mod" target="_blank" class="github-link">
+                        <span>⭐ Star on GitHub</span>
+                    </a>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <button class="nav-item active" data-tab="sounds">
+                        <span class="nav-icon">🎵</span>
+                        <span class="nav-text">Soundboard</span>
+                    </button>
+                    <button class="nav-item" data-tab="library">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Library</span>
+                    </button>
+                    <button class="nav-item" data-tab="settings">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </button>
+                </nav>
+
+                <div class="sidebar-section">
+                    <div class="section-title">
+                        <span>🎮 QUICK ACTIONS</span>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-btn" id="addSoundBtn">
+                            <span class="quick-icon">➕</span>
+                            <span>Add Sound</span>
+                        </button>
+                        <button class="quick-btn" id="importBtn">
+                            <span class="quick-icon">📥</span>
+                            <span>Import Pack</span>
+                        </button>
+                        <button class="quick-btn" id="exportBtn">
+                            <span class="quick-icon">📤</span>
+                            <span>Export Config</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-title">
+                        <span>⌨️ ACTIVE HOTKEYS</span>
+                    </div>
+                    <div class="hotkey-list" id="hotkeyList">
+                        <div class="hotkey-empty">No hotkeys assigned</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="master-control">
+                        <div class="master-label">
+                            <span>🔊 MASTER VOLUME</span>
+                            <span id="masterVolumeValue">80%</span>
+                        </div>
+                        <input type="range" id="masterVolume" min="0" max="100" value="80" class="master-slider">
+                    </div>
+                    <button class="stop-all-btn" id="stopAllBtn">
+                        <span>⏹</span> STOP ALL SOUNDS
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content">
+                <!-- Soundboard Tab -->
+                <div class="tab-content active" id="soundsTab">
+                    <div class="content-header">
+                        <div class="header-left">
+                            <h1 class="page-title">Soundboard</h1>
+                            <p class="page-subtitle">Press hotkeys or click to play sounds</p>
+                        </div>
+                        <div class="header-right">
+                            <div class="search-box">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" id="searchInput" placeholder="Search sounds...">
+                            </div>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid">▦</button>
+                                <button class="view-btn" data-view="list">☰</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sound-categories">
+                        <button class="category-chip active" data-category="all">🔥 All</button>
+                        <button class="category-chip" data-category="memes">😂 Memes</button>
+                        <button class="category-chip" data-category="effects">💥 Effects</button>
+                        <button class="category-chip" data-category="music">🎵 Music</button>
+                        <button class="category-chip" data-category="gaming">🎮 Gaming</button>
+                    </div>
+
+                    <div class="sound-grid" id="soundGrid">
+                        <!-- Sounds will be populated here -->
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-illustration">
+                            <div class="empty-icon">💀</div>
+                            <div class="empty-waves">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <h2>No Sounds Yet</h2>
+                        <p>Click "Add Sound" or drag audio files here to get started</p>
+                        <div class="empty-actions">
+                            <button class="btn-primary" id="emptyAddBtn">
+                                <span>➕</span> Add Your First Sound
+                            </button>
+                        </div>
+                        <div class="supported-formats">
+                            <span>Supported: MP3 • WAV • OGG • M4A • FLAC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library Tab -->
+                <div class="tab-content" id="libraryTab">
+                    <div class="content-header">
+                        <div class="header-left">
+                            <h1 class="page-title">Sound Library</h1>
+                            <p class="page-subtitle">Manage your sound collection</p>
+                        </div>
+                    </div>
+                    <div class="library-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalSounds">0</div>
+                            <div class="stat-label">Total Sounds</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalHotkeys">0</div>
+                            <div class="stat-label">Hotkeys Set</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalSize">0 KB</div>
+                            <div class="stat-label">Library Size</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="settingsTab">
+                    <div class="content-header">
+                        <div class="header-left">
+                            <h1 class="page-title">Settings</h1>
+                            <p class="page-subtitle">Configure BrutalMod</p>
+                        </div>
+                    </div>
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <h3>🎤 Audio Setup</h3>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Virtual Audio Cable</span>
+                                    <span class="setting-desc">Required for mic output</span>
+                                </div>
+                                <a href="https://vb-audio.com/Cable/" target="_blank" class="btn-outline">Download VB-Cable</a>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Audio Output</span>
+                                    <span class="setting-desc">Select output device</span>
+                                </div>
+                                <select id="outputDevice" class="setting-select">
+                                    <option>Default Device</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="settings-card">
+                            <h3>🎨 Appearance</h3>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Theme</span>
+                                    <span class="setting-desc">Choose your style</span>
+                                </div>
+                                <select id="themeSelect" class="setting-select">
+                                    <option value="dark">Dark (Brutal)</option>
+                                    <option value="blood">Blood Red</option>
+                                    <option value="cyber">Cyber Purple</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Animations</span>
+                                    <span class="setting-desc">Enable UI animations</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="animationsToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings-card">
+                            <h3>⌨️ Hotkeys</h3>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Stop All Sounds</span>
+                                    <span class="setting-desc">Press to stop all audio</span>
+                                </div>
+                                <button class="hotkey-btn" id="stopHotkeyBtn">Escape</button>
+                            </div>
+                        </div>
+                        <div class="settings-card">
+                            <h3>💾 Data</h3>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Export Configuration</span>
+                                    <span class="setting-desc">Save your settings</span>
+                                </div>
+                                <button class="btn-outline" id="exportSettingsBtn">Export</button>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Clear All Data</span>
+                                    <span class="setting-desc">Delete all sounds and settings</span>
+                                </div>
+                                <button class="btn-danger" id="clearDataBtn">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Now Playing Bar -->
+        <div class="now-playing-bar" id="nowPlayingBar">
+            <div class="np-info">
+                <div class="np-icon">🔊</div>
+                <div class="np-text">
+                    <span class="np-label">NOW PLAYING</span>
+                    <span class="np-title" id="nowPlayingTitle">sound.mp3</span>
+                </div>
+            </div>
+            <div class="np-progress">
+                <div class="np-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="np-controls">
+                <button class="np-btn" id="npStopBtn">⏹</button>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <!-- Hotkey Assignment Modal -->
+        <div class="modal" id="hotkeyModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>⌨️ Assign Hotkey</h3>
+                    <button class="modal-close" id="closeHotkeyModal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <p>Press any key to assign as hotkey:</p>
+                    <div class="hotkey-preview" id="hotkeyPreview">
+                        <span class="key-display">Press a key...</span>
+                    </div>
+                    <p class="hotkey-sound-name" id="hotkeySoundName"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-outline" id="clearHotkeyBtn">Clear Hotkey</button>
+                    <button class="btn-primary" id="cancelHotkeyBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Sound Modal -->
+        <div class="modal" id="editModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>✏️ Edit Sound</h3>
+                    <button class="modal-close" id="closeEditModal">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Sound Name</label>
+                        <input type="text" id="editSoundName" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="editSoundCategory" class="form-select">
+                            <option value="all">General</option>
+                            <option value="memes">Memes</option>
+                            <option value="effects">Effects</option>
+                            <option value="music">Music</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Volume</label>
+                        <input type="range" id="editSoundVolume" min="0" max="100" value="100" class="form-slider">
+                        <span id="editVolumeValue">100%</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-danger" id="deleteSoundBtn">🗑️ Delete</button>
+                    <button class="btn-primary" id="saveSoundBtn">💾 Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div class="toast-container" id="toastContainer"></div>
+
+        <!-- File Input -->
+        <input type="file" id="fileInput" accept="audio/*" multiple hidden>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

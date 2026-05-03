@@ -1,0 +1,94 @@
+{
+  "name": "brutalmod",
+  "version": "1.0.0",
+  "description": "Professional Soundboard for Gamers - Play sounds through your microphone",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder -wml"
+  },
+  "author": {
+    "name": "brutal-45",
+    "email": "contact@brutalmod.com",
+    "url": "https://github.com/brutal-45"
+  },
+  "homepage": "https://github.com/brutal-45/Brutal-mod#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brutal-45/Brutal-mod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brutal-45/Brutal-mod/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.github.brutal-45.brutalmod",
+    "productName": "BrutalMod",
+    "copyright": "Copyright © 2024 brutal-45",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "sounds/**/*"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "installerHeaderIcon": "icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BrutalMod",
+      "license": "LICENSE",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns",
+      "category": "public.app-category.entertainment",
+      "artifactName": "${productName}-${version}.${ext}"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icon.png",
+      "category": "Audio",
+      "artifactName": "${productName}-${version}.${ext}"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "brutal-45",
+      "repo": "Brutal-mod"
+    }
+  }
+}
