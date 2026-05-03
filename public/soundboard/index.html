@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:;">
+  <title>BrutalMod - Professional Soundboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+  <div class="app">
+    <!-- Title Bar -->
+    <div class="titlebar">
+      <div class="titlebar-drag">
+        <div class="app-logo">
+          <img src="icon.png" alt="BrutalMod" class="logo-img">
+          <span class="logo-text">BRUTAL<span class="logo-accent">MOD</span></span>
+        </div>
+      </div>
+      <div class="window-controls">
+        <button class="control-btn minimize" id="minimize-btn" title="Minimize">
+          <svg width="14" height="14" viewBox="0 0 14 14"><rect y="6" width="14" height="2" fill="currentColor"/></svg>
+        </button>
+        <button class="control-btn maximize" id="maximize-btn" title="Maximize">
+          <svg width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </button>
+        <button class="control-btn close" id="close-btn" title="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-view="soundboard">
+            <span class="nav-icon">🎵</span>
+            <span class="nav-text">Soundboard</span>
+          </button>
+          <button class="nav-item" data-view="library">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">Library</span>
+          </button>
+          <button class="nav-item" data-view="settings">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-text">Settings</span>
+          </button>
+        </nav>
+
+        <!-- Stats -->
+        <div class="sidebar-section">
+          <h3 class="section-title">Statistics</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value" id="total-sounds">0</div>
+              <div class="stat-label">Sounds</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="total-hotkeys">0</div>
+              <div class="stat-label">Hotkeys</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="total-plays">0</div>
+              <div class="stat-label">Plays</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="sidebar-section">
+          <h3 class="section-title">Quick Actions</h3>
+          <button class="action-btn primary" id="add-sound-btn">
+            <span class="btn-icon">➕</span>
+            <span>Add Sound</span>
+          </button>
+          <button class="action-btn" id="import-btn">
+            <span class="btn-icon">📥</span>
+            <span>Import Pack</span>
+          </button>
+          <button class="action-btn" id="export-btn">
+            <span class="btn-icon">📤</span>
+            <span>Export Config</span>
+          </button>
+        </div>
+
+        <!-- Active Hotkeys -->
+        <div class="sidebar-section hotkeys-section">
+          <h3 class="section-title">Active Hotkeys</h3>
+          <div class="hotkeys-list" id="hotkeys-list">
+            <p class="empty-text">No hotkeys assigned</p>
+          </div>
+        </div>
+
+        <!-- Master Volume -->
+        <div class="sidebar-section volume-section">
+          <h3 class="section-title">Master Volume</h3>
+          <div class="volume-control">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="master-volume" min="0" max="100" value="80" class="volume-slider">
+            <span class="volume-value" id="volume-value">80%</span>
+          </div>
+        </div>
+
+        <!-- Stop All Button -->
+        <button class="stop-all-btn" id="stop-all-btn">
+          <span class="btn-icon">⏹</span>
+          <span>STOP ALL (Space)</span>
+        </button>
+
+        <!-- Footer -->
+        <div class="sidebar-footer">
+          <span class="version" id="version">v1.0.0</span>
+          <span class="brand">BRUTALTOOLS</span>
+        </div>
+      </aside>
+
+      <!-- Content Area -->
+      <main class="content">
+        <!-- Soundboard View -->
+        <section class="view active" id="soundboard-view">
+          <div class="view-header">
+            <h1 class="view-title">Soundboard</h1>
+            <p class="view-subtitle">Click a sound or use hotkeys to play</p>
+          </div>
+
+          <!-- Search -->
+          <div class="search-bar">
+            <input type="text" id="search-input" class="search-input" placeholder="Search sounds...">
+          </div>
+
+          <!-- Categories -->
+          <div class="categories">
+            <button class="category-chip active" data-category="all">🔥 All</button>
+            <button class="category-chip" data-category="memes">😂 Memes</button>
+            <button class="category-chip" data-category="effects">💥 Effects</button>
+            <button class="category-chip" data-category="music">🎵 Music</button>
+            <button class="category-chip" data-category="gaming">🎮 Gaming</button>
+            <button class="category-chip" data-category="voice">🗣️ Voice</button>
+          </div>
+
+          <!-- Sound Grid -->
+          <div class="sound-grid" id="sound-grid">
+            <div class="empty-state" id="empty-state">
+              <div class="empty-icon">🎵</div>
+              <h3>No sounds yet</h3>
+              <p>Drag audio files here or click "Add Sound"</p>
+              <p class="supported-formats">Supported: MP3, WAV, OGG, M4A, FLAC, WEBM</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Library View -->
+        <section class="view" id="library-view">
+          <div class="view-header">
+            <h1 class="view-title">Sound Library</h1>
+            <p class="view-subtitle">Manage your sound collection</p>
+          </div>
+          <div class="library-list" id="library-list">
+            <p class="empty-text">No sounds in library</p>
+          </div>
+        </section>
+
+        <!-- Settings View -->
+        <section class="view" id="settings-view">
+          <div class="view-header">
+            <h1 class="view-title">Settings</h1>
+            <p class="view-subtitle">Configure BrutalMod</p>
+          </div>
+          
+          <div class="settings-content">
+            <!-- Audio Setup -->
+            <div class="settings-card">
+              <h3>🎙️ Microphone Output Setup</h3>
+              <p class="setting-desc">
+                To play sounds through your microphone in Discord, games, and other apps, 
+                you need to install a virtual audio cable.
+              </p>
+              <a href="https://vb-audio.com/Cable/" target="_blank" class="link-btn">
+                Download VB-Cable (Free) ↗
+              </a>
+            </div>
+
+            <!-- Setup Steps -->
+            <div class="settings-card">
+              <h3>📋 How to Setup</h3>
+              <ol class="setup-steps">
+                <li>Install <strong>VB-Cable</strong> from the link above</li>
+                <li>Restart your computer</li>
+                <li>Set <strong>"CABLE Input"</strong> as Windows default playback device</li>
+                <li>Set <strong>"CABLE Output"</strong> as microphone in Discord/Games</li>
+                <li>Now BrutalMod sounds will play through your mic!</li>
+              </ol>
+            </div>
+
+            <!-- Data Management -->
+            <div class="settings-card">
+              <h3>💾 Data Management</h3>
+              <p class="setting-desc">
+                Export your sounds and settings to share or backup. 
+                Import to restore or use someone else's sound pack.
+              </p>
+              <div class="settings-actions">
+                <button class="action-btn" id="export-config-btn">
+                  <span class="btn-icon">📤</span> Export Config
+                </button>
+                <button class="action-btn" id="import-config-btn">
+                  <span class="btn-icon">📥</span> Import Config
+                </button>
+                <button class="action-btn danger" id="clear-data-btn">
+                  <span class="btn-icon">🗑️</span> Clear All Data
+                </button>
+              </div>
+            </div>
+
+            <!-- About -->
+            <div class="settings-card">
+              <h3>ℹ️ About</h3>
+              <p class="setting-desc">
+                <strong>BrutalMod</strong> v<span id="app-version">1.0.0</strong><br>
+                100% Free & Open Source - MIT License<br><br>
+                Made with ❤️ by <strong>brutal-45</strong>
+              </p>
+              <div class="settings-actions">
+                <a href="https://github.com/brutal-45/Brutal-mod" target="_blank" class="link-btn">
+                  GitHub Repository ↗
+                </a>
+                <a href="https://github.com/brutal-45/Brutal-mod/releases" target="_blank" class="link-btn">
+                  Releases ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Now Playing Bar -->
+    <div class="now-playing" id="now-playing">
+      <div class="np-info">
+        <span class="np-icon">🎵</span>
+        <span class="np-title" id="np-title">No sound playing</span>
+      </div>
+      <div class="np-progress">
+        <div class="np-progress-bar" id="np-progress-bar"></div>
+      </div>
+      <span class="np-time" id="np-time">0:00 / 0:00</span>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="edit-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>✏️ Edit Sound</h2>
+          <button class="modal-close" id="modal-close">&times;</button>
+        </div>
+        <div class="modal-content">
+          <input type="hidden" id="edit-sound-id">
+          
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="edit-name" class="form-input" placeholder="Sound name">
+          </div>
+
+          <div class="form-group">
+            <label>Category</label>
+            <select id="edit-category" class="form-input">
+              <option value="all">🔥 All</option>
+              <option value="memes">😂 Memes</option>
+              <option value="effects">💥 Effects</option>
+              <option value="music">🎵 Music</option>
+              <option value="gaming">🎮 Gaming</option>
+              <option value="voice">🗣️ Voice</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Hotkey</label>
+            <div class="hotkey-input-wrapper">
+              <input type="text" id="edit-hotkey" class="form-input" placeholder="Click and press a key" readonly>
+              <button class="clear-hotkey-btn" id="clear-hotkey-btn">Clear</button>
+            </div>
+            <p class="form-hint">Press F1-F12, A-Z, 0-9, or Numpad keys</p>
+          </div>
+
+          <div class="form-group">
+            <label>Volume</label>
+            <div class="volume-input-wrapper">
+              <input type="range" id="edit-volume" min="0" max="100" value="100" class="volume-slider">
+              <span class="volume-value" id="edit-volume-value">100%</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="action-btn danger" id="delete-sound-btn">🗑️ Delete</button>
+          <button class="action-btn" id="cancel-edit-btn">Cancel</button>
+          <button class="action-btn primary" id="save-edit-btn">💾 Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toasts" id="toasts"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

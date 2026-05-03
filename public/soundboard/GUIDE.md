@@ -4,6 +4,27 @@
 
 ---
 
+## ⚠️ IMPORTANT: How to Run This App
+
+**DO NOT double-click `app.js` directly!** This will cause an error because this is an **Electron application** that requires Node.js and Electron to run.
+
+### ✅ Correct Way to Run:
+
+| Method | Steps |
+|--------|-------|
+| **Easy Way** | Double-click `START_HERE.bat` and choose option 1 |
+| **Alternative** | Double-click `RUN.bat` |
+| **Command Line** | Open terminal in this folder and run `npm install` then `npm start` |
+
+### 📋 Prerequisites:
+1. **Install Node.js** from https://nodejs.org (LTS version recommended)
+2. Run `START_HERE.bat` or `RUN.bat`
+3. The app will automatically install dependencies and launch!
+
+> 💡 **First run may take a minute** to download Electron (~50MB)
+
+---
+
 ## 📑 Table of Contents
 
 1. [Introduction](#introduction)
@@ -136,6 +157,8 @@ When you first open BrutalMod:
 ---
 
 ## Adding Sounds
+
+> 📘 **See [ADDING_SOUNDS.md](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md) for the complete detailed guide on adding, editing, and managing sounds!**
 
 ### Method 1: Drag & Drop (Recommended)
 
@@ -320,6 +343,8 @@ Or simpler:
 ---
 
 ## Managing Your Library
+
+> 📘 **See [ADDING_SOUNDS.md](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md) for complete details on library management!**
 
 ### Organizing Sounds
 
