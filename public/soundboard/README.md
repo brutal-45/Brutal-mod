@@ -51,7 +51,7 @@
 | Document | Description |
 |----------|-------------|
 | **[📖 Complete User Guide](https://github.com/brutal-45/Brutal-mod/blob/master/public/soundboard/GUIDE.md)** | A to Z guide: Installation, Setup, Usage, Troubleshooting |
-| **[🎵 Adding & Managing Sounds](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md)** | Detailed guide for adding, editing, and organizing sounds |
+| **[🎵 Adding & Managing Sounds](https://github.com/brutal-45/Brutal-mod/blob/master/public/soundboard/ADDING_SOUNDS.md)** | Detailed guide for adding, editing, and organizing sounds |
 | **[🔧 Build Guide](#️-building-from-source)** | How to build from source code |
 
 ### Quick Links
