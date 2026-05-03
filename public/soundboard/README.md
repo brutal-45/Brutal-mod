@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/brutal-45/Brutal-mod/main/public/brutalmod-logo.png" alt="BrutalMod Logo" width="180" height="180">
+<img src="https://raw.githubusercontent.com/brutal-45/Brutal-mod/main/public/brutalmod-logo.png" alt="Brutal-Mod Logo" width="180" height="180">
 
 # 🔥 BrutalMod
 
