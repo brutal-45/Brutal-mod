@@ -53,7 +53,5 @@ Stage Summary:
 ---
 Final Summary:
 - Project: BrutalMod - Soundboard for Gamers
-- Landing page: http://localhost:3000/
-- Download API: http://localhost:3000/api/download
 - Zip file: BrutalMod-v1.0.zip (~11KB compressed)
 - Total app size: ~60KB uncompressed
