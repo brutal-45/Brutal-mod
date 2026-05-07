@@ -3,7 +3,7 @@
 First off, thank you for considering contributing to BrutalMod! It's people like you that make BrutalMod such a great tool.
 
 ## 🌟 Ways to Contribute
-
+  
 ### Report Bugs
 If you find a bug, please open an issue with:
 - A clear title and description
