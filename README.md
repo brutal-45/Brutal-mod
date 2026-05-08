@@ -139,7 +139,7 @@ npm install
 
 # Build for Windows
 npm run build:win
-
+ 
 # Find your exe in the 'dist' folder
 ```
 
