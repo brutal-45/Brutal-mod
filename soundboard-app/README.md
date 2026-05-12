@@ -3,7 +3,7 @@
 > Professional Soundboard for Gamers  
 > **🔥 Developed Under BRUTALTOOLS 🔥**
 
----
+--- 
 
 ## Quick Start
 
