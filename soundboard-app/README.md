@@ -6,7 +6,7 @@
 --- 
 
 ## Quick Start
-
+ 
 ### HTML Version (No Installation)
 1. Open `index.html` in any modern browser
 2. Add your sounds using the "Add Sound" button
