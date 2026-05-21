@@ -10,6 +10,6 @@ Supported formats:
 - FLAC
 
 Tips:
-- Use short sound effects (1-5 seconds) for best results
+- Use short sound effects (1-5 seconds) for best results 
 - Keep file names simple for easy identification
 - You can organize sounds in subfolders
