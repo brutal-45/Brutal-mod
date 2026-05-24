@@ -48,7 +48,7 @@
 
 BrutalMod is a professional soundboard application for Windows that allows you to play audio files through your microphone input. This means you can play sound effects, music, or any audio during voice calls in Discord, games, Zoom, Teams, and more.
 
-### Key Features
+### Key Features 
 
 | Feature | Description |
 |---------|-------------|
