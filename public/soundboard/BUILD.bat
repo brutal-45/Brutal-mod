@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo   BrutalMod v1.0.0 - Build Script
+echo   BrutalMod v1.0.0 - Build Script 
 echo ========================================
 echo.
 echo This script will build the Windows EXE for BrutalMod.
