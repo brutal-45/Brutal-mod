@@ -5,7 +5,7 @@
 ---
 
 ## 📋 Quick Navigation
-
+ 
 1. [Adding Sounds](#-adding-sounds)
 2. [Sound File Formats](#-sound-file-formats)
 3. [Managing Your Sound Library](#-managing-your-sound-library)
