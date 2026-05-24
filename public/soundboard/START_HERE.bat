@@ -10,7 +10,7 @@ echo  **********************************************************
 echo.
 echo  IMPORTANT: Do NOT double-click app.js directly!
 echo.
-echo  This is an Electron application. Use this script to run it.
+echo  This is an Electron application. Use this script to run it. 
 echo.
 echo  Options:
 echo  =========
