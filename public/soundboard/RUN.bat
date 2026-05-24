@@ -4,9 +4,9 @@ color 0A
 cls
 echo.
 echo  ================================================================
-echo  *                                                                *
-echo  *                BrutalMod v1.0.0 - Soundboard                   *
-echo  *                                                                *
+echo  *                                                              *
+echo  *                BrutalMod v1.0.0 - Soundboard                 *
+echo  *                                                              *
 echo  ================================================================
 echo.
 echo  NOTE: This is an Electron app - it requires Node.js to run.
