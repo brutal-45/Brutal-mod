@@ -33,7 +33,7 @@
 **BrutalMod** is a lightweight, professional soundboard application for Windows. Play any sound effect, music, or audio clip directly through your microphone input - perfect for Discord, games, streams, and more.
 
 ### 🎯 Why Choose BrutalMod?
-
+ 
 | Feature | BrutalMod | Others |
 |---------|:---------:|:------:|
 | **Download Size** | ~50 MB | 100MB+ |
