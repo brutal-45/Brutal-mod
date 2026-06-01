@@ -4,7 +4,7 @@ Place your audio files in this folder!
 
 Supported formats:
 - MP3
-- WAV  
+- WAV
 - OGG
 - M4A
 - FLAC
