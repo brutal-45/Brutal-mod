@@ -1,6 +1,6 @@
 # 💀 BrutalMod
 
-> Professional Soundboard for Gamers  
+> Professional Soundboard for Gamers
 > **🔥 Developed Under BRUTALTOOLS 🔥**
 
 --- 
