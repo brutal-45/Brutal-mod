@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "============================================"
-echo "  BrutalMod - Build Script" 
+echo "  BrutalMod - Build Script"
 echo "============================================"
 echo ""
 
