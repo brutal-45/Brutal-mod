@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 title BrutalMod - Quick Start
 color 0A
 echo.
