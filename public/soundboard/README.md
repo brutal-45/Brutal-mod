@@ -5,7 +5,7 @@
 
 ### *The Ultimate Soundboard for Gamers & Streamers*
 
-**Play sounds through your microphone like a pro**
+**Play sounds through your microphone like a pro** 
 
 [![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/blob/main/LICENSE)
