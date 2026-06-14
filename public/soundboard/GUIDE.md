@@ -21,7 +21,7 @@
 2. Run `START_HERE.bat` or `RUN.bat`
 3. The app will automatically install dependencies and launch!
 
-> 💡 **First run may take a minute** to download Electron (~50MB)
+> 💡 **First run may take a minute** to download Electron (~50MB) 
 
 ---
 
