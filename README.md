@@ -6,7 +6,6 @@
 
 **Play sounds through your microphone in Discord, Zoom, Teams, and more!**
 
-<img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
 
 [![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](LICENSE)
