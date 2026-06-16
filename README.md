@@ -14,7 +14,7 @@
 
 **🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutal-45) 🔥**
 
-[Download](#-download) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Building](#-building-from-source)
+[Download](#-download) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Building](#-building-from-source) 
 
 </div>
 
