@@ -1,4 +1,4 @@
-# SoundWave Pro - Sounds Folder
+# SoundWave Pro - Sounds Folder 
 
 Place your audio files in this folder!
 
