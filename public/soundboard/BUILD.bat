@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 echo ========================================
 echo   BrutalMod v1.0.0 - Build Script
 echo ========================================
