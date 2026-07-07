@@ -1,5 +1,5 @@
 @echo off
-title BrutalMod - Running...
+title BrutalMod - Running..
 color 0A
 cls
 echo.
