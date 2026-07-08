@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron');
+const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron'); 
 const path = require('path');
  
 // Disable GPU acceleration for better compatibility
