@@ -1,4 +1,4 @@
-# 🎵 Adding & Managing Sounds - Complete Guide 
+# 🎵 Adding & Managing Sounds - Complete Guide
 
 > **Everything you need to know about adding, organizing, and managing your sound library in BrutalMod**
 
