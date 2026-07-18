@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer } = require('electron'); 
 
 // Expose protected methods to renderer
 contextBridge.exposeInMainWorld('electronAPI', {
