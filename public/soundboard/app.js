@@ -1,4 +1,4 @@
-// BrutalMod - Professional Soundboard Application 
+// BrutalMod - Professional Soundboard Application
 // Version 1.0.0 - https://github.com/brutal-45/Brutal-mod
 
 class BrutalMod {
