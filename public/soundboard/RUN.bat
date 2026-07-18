@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 title BrutalMod - Running..
 color 0A
 cls
