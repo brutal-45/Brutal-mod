@@ -1,4 +1,4 @@
-# 📚 BrutalMod Complete User Guide 
+# 📚 BrutalMod Complete User Guide
 
 > **Everything you need to know to use BrutalMod like a pro** 
 
