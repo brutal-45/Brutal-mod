@@ -1,4 +1,4 @@
-# Contributing to BrutalMod 
+# Contributing to BrutalMod
 
 First off, thank you for considering contributing to BrutalMod! It's people like you that make BrutalMod such a great tool.
 
