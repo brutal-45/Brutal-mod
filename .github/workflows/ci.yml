@@ -9,6 +9,11 @@ on:
 permissions:
   contents: read
 
+env:
+  # Required by prisma generate / build (schema.prisma uses env("DATABASE_URL")).
+  # generate doesn't connect to the DB, but Prisma requires the var to be set.
+  DATABASE_URL: "file:./dev.db"
+
 jobs:
   build:
     name: Lint & build
