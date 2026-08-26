@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "lint": "bun run lint",
+    "build": "bun run build"
+  },
+  "exclude": [
+    ".next",
+    "node_modules",
+    "public/soundboard",
+    "soundboard-app"
+  ]
+}
