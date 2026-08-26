@@ -1,12 +1,7 @@
 {
   "tasks": {
-    "lint": "bun run lint",
-    "build": "bun run build"
+    "lint": "eslint .",
+    "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/"
   },
   "exclude": [
     ".next",
-    "node_modules",
-    "public/soundboard",
-    "soundboard-app"
-  ]
-}
