@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+permissions:
+  contents: read
+
+env:
+  # Required by prisma generate / build (schema.prisma uses env("DATABASE_URL")).
+  # generate doesn't connect to the DB, but Prisma requires the var to be set.
+  DATABASE_URL: "file:./dev.db"
+
+jobs:
+  build:
+    name: Lint & build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: bun run db:generate
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Deno lint task
+        run: deno task lint
+
+      - name: Build
+        run: bun run build

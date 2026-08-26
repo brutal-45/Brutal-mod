@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 title BrutalMod - Quick Start
 color 0A
 echo.
@@ -10,7 +10,7 @@ echo  **********************************************************
 echo.
 echo  IMPORTANT: Do NOT double-click app.js directly!
 echo.
-echo  This is an Electron application. Use this script to run it.
+echo  This is an Electron application. Use this script to run it. 
 echo.
 echo  Options:
 echo  =========

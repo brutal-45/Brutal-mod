@@ -5,7 +5,7 @@
 
 ### *The Ultimate Soundboard for Gamers & Streamers*
 
-**Play sounds through your microphone like a pro**
+**Play sounds through your microphone like a pro** 
 
 [![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/blob/main/LICENSE)
@@ -33,7 +33,7 @@
 **BrutalMod** is a lightweight, professional soundboard application for Windows. Play any sound effect, music, or audio clip directly through your microphone input - perfect for Discord, games, streams, and more.
 
 ### 🎯 Why Choose BrutalMod?
-
+ 
 | Feature | BrutalMod | Others |
 |---------|:---------:|:------:|
 | **Download Size** | ~50 MB | 100MB+ |
@@ -50,8 +50,8 @@
 
 | Document | Description |
 |----------|-------------|
-| **[📖 Complete User Guide](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/GUIDE.md)** | A to Z guide: Installation, Setup, Usage, Troubleshooting |
-| **[🎵 Adding & Managing Sounds](https://github.com/brutal-45/Brutal-mod/blob/main/public/soundboard/ADDING_SOUNDS.md)** | Detailed guide for adding, editing, and organizing sounds |
+| **[📖 Complete User Guide](https://github.com/brutal-45/Brutal-mod/blob/master/public/soundboard/GUIDE.md)** | A to Z guide: Installation, Setup, Usage, Troubleshooting |
+| **[🎵 Adding & Managing Sounds](https://github.com/brutal-45/Brutal-mod/blob/master/public/soundboard/ADDING_SOUNDS.md)** | Detailed guide for adding, editing, and organizing sounds |
 | **[🔧 Build Guide](#️-building-from-source)** | How to build from source code |
 
 ### Quick Links

@@ -1,10 +1,10 @@
 ╔══════════════════════════════════════════════════════════════╗
-║                    💀 BRUTALMOD v1.0 💀                      ║
-║             PROFESSIONAL SOUNDBOARD FOR GAMERS              ║
+║                    💀 BRUTALMOD v1.0 💀                     ║
+║              PROFESSIONAL SOUNDBOARD FOR GAMERS              ║
 ╚══════════════════════════════════════════════════════════════╝
 
 ════════════════════════════════════════════════════════════════
-                    🚀 QUICK START
+                      🚀 QUICK START
 ════════════════════════════════════════════════════════════════
 
 OPTION A: RUN AS HTML (No installation)

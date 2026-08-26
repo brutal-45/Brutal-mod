@@ -27,5 +27,5 @@ function Switch({
     </SwitchPrimitive.Root>
   )
 }
-
+ 
 export { Switch }

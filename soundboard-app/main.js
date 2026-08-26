@@ -1,13 +1,13 @@
 const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron');
 const path = require('path');
-
+ 
 // Disable GPU acceleration for better compatibility
 app.disableHardwareAcceleration();
 
 let mainWindow;
 
 function createWindow() {
-    mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({ 
         width: 1200,
         height: 800,
         minWidth: 900,

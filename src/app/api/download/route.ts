@@ -1,18 +1,7 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server' 
 import archiver from 'archiver'
-import { Readable } from 'stream'
-import fs from 'fs'
+import fs from 'fs' 
 import path from 'path'
-
-// Convert stream to buffer
-async function streamToBuffer(stream: NodeJS.ReadableStream): Promise<Buffer> {
-  return new Promise((resolve, reject) => {
-    const chunks: Buffer[] = []
-    stream.on('data', (chunk) => chunks.push(Buffer.from(chunk)))
-    stream.on('error', reject)
-    stream.on('end', () => resolve(Buffer.concat(chunks)))
-  })
-}
 
 export async function GET() {
   try {
@@ -58,7 +47,7 @@ export async function GET() {
     const zipBuffer = await archivePromise
 
     // Return the zip file
-    return new NextResponse(zipBuffer, {
+    return new NextResponse(new Uint8Array(zipBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/zip',

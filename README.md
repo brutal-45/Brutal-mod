@@ -6,7 +6,6 @@
 
 **Play sounds through your microphone in Discord, Zoom, Teams, and more!**
 
-<img src="public/brutalmod-logo.png" alt="BrutalMod Logo" width="120" height="120">
 
 [![Version](https://img.shields.io/badge/version-1.0.0-red.svg?style=for-the-badge)](https://github.com/brutal-45/Brutal-mod/releases)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=for-the-badge)](LICENSE)
@@ -15,7 +14,7 @@
 
 **🔥 DEVELOPED UNDER [BRUTALTOOLS](https://github.com/brutal-45) 🔥**
 
-[Download](#-download) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Building](#-building-from-source)
+[Download](#-download) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Building](#-building-from-source) 
 
 </div>
 
@@ -139,7 +138,7 @@ npm install
 
 # Build for Windows
 npm run build:win
-
+ 
 # Find your exe in the 'dist' folder
 ```
 
@@ -424,7 +423,7 @@ copies or substantial portions of the Software.
 
 ## 📞 Support
 
-- 📧 Email: creatorsports81@gmail.com
+- 📧 Email: creatorsports81@gmail.com  
 - 💬 Discord: [Join our server](https://discord.gg/)
 - 🐛 Issues: [GitHub Issues](https://github.com/brutal-45/Brutal-mod/issues)
 - 📖 Wiki: [Documentation](https://github.com/brutal-45/Brutal-mod/wiki)
