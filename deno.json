@@ -1,7 +1,17 @@
 {
   "tasks": {
-    "lint": "eslint .",
+    "lint": "deno lint",
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/"
   },
   "exclude": [
     ".next",
+    "node_modules",
+    "public/soundboard",
+    "soundboard-app"
+  ],
+  "lint": {
+    "rules": {
+      "exclude": ["require-await", "no-sloppy-imports", "no-window", "no-window-prefix", "no-explicit-any", "no-unused-vars"]
+    }
+  }
+}
