@@ -371,12 +371,23 @@ function playSound(soundId) {
     
     // Create audio
     const audio = new Audio(sound.data);
-    audio.volume = sound.volume * state.masterVolume;
+    
+    // When the voice changer is on, the clip goes through its graph so the call hears it.
+    const detachVoiceRoute = window.VoiceChanger?.attachSound(audio, sound.volume * state.masterVolume) || null;
+    if (!detachVoiceRoute) {
+        audio.volume = sound.volume * state.masterVolume;
+        if (state.settings.outputDeviceId && typeof audio.setSinkId === 'function') {
+            audio.setSinkId(state.settings.outputDeviceId).catch(() => {
+                showToast('Selected output device unavailable, using default', 'error');
+            });
+        }
+    }
     
     state.currentlyPlaying = {
         id: soundId,
         audio: audio,
-        startTime: Date.now()
+        startTime: Date.now(),
+        cleanup: detachVoiceRoute
     };
     
     // Update UI
@@ -412,6 +423,7 @@ function stopSound(soundId) {
     if (state.currentlyPlaying?.id === soundId) {
         state.currentlyPlaying.audio.pause();
         state.currentlyPlaying.audio.currentTime = 0;
+        state.currentlyPlaying.cleanup?.();
         state.currentlyPlaying = null;
         
         updateSoundCardState(soundId, false);
@@ -768,13 +780,21 @@ async function loadAudioDevices() {
         
         if (outputSelect) {
             const audioOutputs = devices.filter(d => d.kind === 'audiooutput');
-            outputSelect.innerHTML = '<option>Default Device</option>';
+            outputSelect.innerHTML = '<option value="">Default Device</option>';
             
             audioOutputs.forEach(device => {
                 const option = document.createElement('option');
                 option.value = device.deviceId;
                 option.textContent = device.label || `Device ${device.deviceId.slice(0, 8)}`;
                 outputSelect.appendChild(option);
+            });
+            
+            // Restore the saved choice; fall back to default if that device is gone.
+            const saved = state.settings.outputDeviceId || '';
+            outputSelect.value = audioOutputs.some(d => d.deviceId === saved) ? saved : '';
+            outputSelect.addEventListener('change', () => {
+                state.settings.outputDeviceId = outputSelect.value;
+                saveToStorage();
             });
         }
     } catch (e) {

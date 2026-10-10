@@ -1429,3 +1429,64 @@ body {
         width: 100%;
     }
 }
+
+/* ============================================
+   VOICE CHANGER (settings card)
+   ============================================ */
+.voice-card .vc-intro {
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.vc-slider-row {
+    align-items: center;
+}
+
+.vc-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 260px;
+}
+
+.vc-slider .form-slider {
+    flex: 1;
+    margin-top: 0;
+}
+
+.vc-value {
+    min-width: 64px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.85;
+}
+
+.vc-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.vc-actions input[type="text"] {
+    min-width: 140px;
+}
+
+.vc-status {
+    margin: 12px 0 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.vc-status[data-kind="ok"] {
+    color: #6fdc8c;
+}
+
+.vc-status[data-kind="warn"] {
+    color: #ffc36b;
+}
+
+.vc-status[data-kind="error"] {
+    color: #ff6b6b;
+}

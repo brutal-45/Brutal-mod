@@ -42,6 +42,8 @@
       "index.html",
       "styles.css",
       "app.js",
+      "voice-core.js",
+      "voice-changer.js",
       "sounds/**/*"
     ],
     "extraMetadata": {

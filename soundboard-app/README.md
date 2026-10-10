@@ -31,6 +31,8 @@ npm run build:win
 - ✅ Works with Discord, Zoom, Teams
 - ✅ No installation required (HTML version)
 - ✅ Native EXE build included
+- ✅ Real-time Voice Changer (pitch, robot, radio, drive, reverb, custom presets)
+- ✅ Send sounds and your processed voice to a virtual cable
 
 ---
 
@@ -42,6 +44,32 @@ To play sounds through your microphone:
 2. **Set playback device** to "CABLE Input"
 3. **Set voice app mic** to "CABLE Output"
 4. **Done!** Sounds now play through your mic
+
+---
+
+## Voice Changer
+
+Turn on **Settings → 🎙️ Voice Changer** to process your mic in real time.
+
+1. Install a virtual cable (VB-Cable on Windows, BlackHole on macOS).
+2. In **Microphone**, pick your real mic.
+3. In **Virtual Mic Output**, pick "CABLE Input" (or BlackHole).
+4. Turn on **Enable Voice Changer**.
+5. In your call app, set the microphone to "CABLE Output" (or BlackHole).
+
+Your call now hears the processed voice, plus any sounds you play while the voice changer is on. Sounds also play locally.
+
+- **Pitch:** -12 to +12 semitones.
+- **Effects:** Robot (ring modulation and frequency), Reverb, Drive, Radio filter.
+- **Effect Mix** and **Bypass** let you compare with the raw voice.
+- **Presets:** built-in (Natural, Deep Giant, Chipmunk, Radio Comms, Robot, Cathedral) plus your own, saved in the browser.
+- **Hear Myself** plays the processed voice through your speakers. It can echo, so use headphones.
+
+Pitch processing adds about 21 ms of latency, plus your audio driver's buffer. Pitch shifting can change loudness by a few dB on dense sounds.
+
+The voice changer is in `voice-core.js` (DSP and presets, with tests in `test/`) and `voice-changer.js` (Web Audio engine and UI).
+
+Run the tests with `node --test test/voice-core.test.js`.
 
 ---
 

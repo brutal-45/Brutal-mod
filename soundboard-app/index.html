@@ -205,6 +205,125 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="settings-card voice-card">
+                            <h3>🎙️ Voice Changer</h3>
+                            <p class="setting-desc vc-intro">Process your mic in real time and send it to a virtual cable. Sounds you play are sent too, so your call hears them.</p>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Enable Voice Changer</span>
+                                    <span class="setting-desc">Turns on mic processing and the virtual mic feed</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="vcEnabled">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Microphone</span>
+                                    <span class="setting-desc">Your real input device</span>
+                                </div>
+                                <select id="vcMicSelect" class="setting-select"></select>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Virtual Mic Output</span>
+                                    <span class="setting-desc">Pick "CABLE Input" (VB-Cable) or BlackHole</span>
+                                </div>
+                                <select id="vcOutputSelect" class="setting-select"></select>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Preset</span>
+                                    <span class="setting-desc">Built-in voices and your saved presets</span>
+                                </div>
+                                <select id="vcPreset" class="setting-select"></select>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Pitch</span>
+                                    <span class="setting-desc">Semitones, -12 to +12</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcPitch" min="-12" max="12" step="1" value="0" class="form-slider"><span id="vcPitchValue" class="vc-value">0 st</span></div>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Robot</span>
+                                    <span class="setting-desc">Ring-modulation amount</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcRing" min="0" max="100" step="1" value="0" class="form-slider"><span id="vcRingValue" class="vc-value">0%</span></div>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Robot Frequency</span>
+                                    <span class="setting-desc">Lower is growlier</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcRingHz" min="20" max="400" step="1" value="50" class="form-slider"><span id="vcRingHzValue" class="vc-value">50 Hz</span></div>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Reverb</span>
+                                    <span class="setting-desc">Room size and tail</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcReverb" min="0" max="100" step="1" value="0" class="form-slider"><span id="vcReverbValue" class="vc-value">0%</span></div>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Drive</span>
+                                    <span class="setting-desc">Grit and distortion</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcDrive" min="0" max="100" step="1" value="0" class="form-slider"><span id="vcDriveValue" class="vc-value">0%</span></div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Radio Filter</span>
+                                    <span class="setting-desc">Band-limits voice like a comms radio</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="vcRadio">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item vc-slider-row">
+                                <div class="setting-info">
+                                    <span class="setting-label">Effect Mix</span>
+                                    <span class="setting-desc">Dry voice to fully processed</span>
+                                </div>
+                                <div class="vc-slider"><input type="range" id="vcMix" min="0" max="100" step="1" value="100" class="form-slider"><span id="vcMixValue" class="vc-value">100%</span></div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Bypass</span>
+                                    <span class="setting-desc">Send your raw voice without effects</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="vcBypass">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Hear Myself</span>
+                                    <span class="setting-desc">Play your processed voice through your speakers (can echo)</span>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" id="vcMonitor">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <span class="setting-label">Save Preset</span>
+                                    <span class="setting-desc">Store the current settings under a name</span>
+                                </div>
+                                <div class="vc-actions">
+                                    <input type="text" id="vcPresetName" placeholder="Preset name" maxlength="40">
+                                    <button class="btn-outline" id="vcSavePreset">Save</button>
+                                    <button class="btn-danger" id="vcDeletePreset">Delete</button>
+                                </div>
+                            </div>
+                            <p id="vcStatus" class="vc-status" data-kind="info">Off.</p>
+                        </div>
                         <div class="settings-card">
                             <h3>🎨 Appearance</h3>
                             <div class="setting-item">
@@ -344,6 +463,8 @@
         <input type="file" id="fileInput" accept="audio/*" multiple hidden>
     </div>
 
+    <script src="voice-core.js"></script>
+    <script src="voice-changer.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
