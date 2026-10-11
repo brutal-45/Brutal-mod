@@ -1,11 +1,5 @@
 # 🎙️ v1.1.0 - Real-Time Voice Changer for BrutalMod
 
-> ⚠️ **Maintainer checklist (delete before publishing):**
-> 1. Bump `version` in `soundboard-app/package.json` from `1.0.0` to `1.1.0`. The installer name is built from it.
-> 2. Build the Windows installer on Windows (`npm run build:win`). The macOS `.dmg` target exists but has **not** been verified; only publish a macOS build after testing on a Mac.
-> 3. Test the voice changer on real hardware with VB-Cable before publishing (see *Known limitations*). The code is covered by unit tests and a simulated UI test, but not yet by a real microphone test.
-> 4. Mobile (Android/iOS) is **not** in this release. It's listed only as roadmap.
-
 ---
 
 ## 📖 Release Overview
@@ -28,7 +22,7 @@ BrutalMod **v1.1.0** adds a **Real-Time Voice Changer**. Shift your pitch by up 
 - 🔗 **Soundboard integration:** clips you play while the voice changer is on go through the same processing chain, so your call hears them.
 
 ### 💻 PC Specifics (Windows)
-- 🔌 **Virtual Mic Output selector:** choose "CABLE Input" (VB-Cable) directly in the app, so you don't have to change your system default device.
+- 🔌 **Virtual Mic Output selector** (browser build and future desktop build): choose "CABLE Input" (VB-Cable) directly in the app, so you don't have to change your system default device.
 - 🎚️ **Microphone selector:** pick your real input device, with fallback to the default if it's unplugged.
 - 🔄 **Device list refreshes** when devices are plugged in or removed.
 - ⚠️ **Not in this release:** system-wide hotkeys for sounds or presets. Only **Escape** (stop all sounds) works globally.
@@ -46,15 +40,20 @@ BrutalMod **v1.1.0** adds a **Real-Time Voice Changer**. Shift your pitch by up 
 
 ## 📥 Download & Installation
 
-| Platform | Build | Link |
+| Platform | Build | Status |
 |---|---|---|
-| 🪟 Windows | `BrutalMod-Setup-1.1.0.exe` (installer) | [Release page](https://github.com/brutal-45/Brutal-mod/releases/tag/v1.1.0) |
-| 🌐 Anywhere (no install) | `soundboard-app/index.html` in a browser (Chrome or Edge recommended) | [Repository](https://github.com/brutal-45/Brutal-mod) |
-| 🍎 macOS | Not yet verified; see the checklist above | — |
-| 🤖 Android / 🍏 iOS | Not available yet | — |
+| 🌐 Any (no install) | `BrutalMod-v1.1.0.zip`: unzip and open `index.html` in Chrome or Edge | ✅ Available |
+| 🪟 Windows | `BrutalMod-Setup-1.1.0.exe` | ⏳ Not in this release yet |
+| 🍎 macOS | `.dmg` | ⏳ Not in this release yet |
+| 🤖 Android | `.apk` | ⏳ Not in this release yet |
+| 🍏 iOS | TestFlight / App Store | ⏳ Not in this release yet |
 
-**Quick Start (Windows):**
-- Run the installer. SmartScreen may warn about an unsigned app. Choose *More info → Run anyway*.
+Desktop installers and mobile builds need platform build machines and signing keys, so they will ship as a follow-up. Track them in the issues.
+
+**Quick Start (web build):**
+1. Download `BrutalMod-v1.1.0.zip` and extract it.
+2. Open `index.html` in Chrome or Edge.
+3. Allow microphone access when you turn on the voice changer.
 
 ### 💡 Setup Tip: Enabling the Voice Changer on PC
 1. Install **VB-Cable** from [vb-audio.com/Cable](https://vb-audio.com/Cable/) and restart.
@@ -71,6 +70,7 @@ BrutalMod **v1.1.0** adds a **Real-Time Voice Changer**. Shift your pitch by up 
 
 - 🔬 **Not tested on real hardware yet:** the voice changer has been checked with automated tests and a simulated browser environment. Test it with your mic before relying on it live.
 - 📉 **Loudness varies a little:** pitch shifting can change loudness by a few dB on dense sounds. Adjust the master volume if needed.
+- 📂 **Open from a local server for full features:** some browsers block the pitch-shifting module when `index.html` is opened straight from disk (`file://`). In that case the app shows a warning and runs without pitch shifting. Serve the folder instead, for example `python3 -m http.server 8080`, then open `http://localhost:8080`.
 - 🌐 **Browser engine:** the voice changer uses the Web Audio API. Use a recent Chromium-based version (Electron or Chrome/Edge).
 - 🔈 **Local playback:** soundboard clips play on your default speakers while the voice changer is on. The virtual mic output only carries the processed voice and clips.
 
